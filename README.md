@@ -34,10 +34,10 @@ func main() {
 	var nets = []string{"10.0.1.0/24", "127.0.0.1/32", "10.0.0.2/32"}
 
 	// allowed
-	var client string = "10.0.0.2"
+	var client string = "10.0.0.2:2203"
 
 	// denied
-	// var client string = "10.0.0.3"
+	// var client string = "10.0.0.3:2203"
 
 	auth, err := ipauth.IPAuth(nets)
 	if err != nil {

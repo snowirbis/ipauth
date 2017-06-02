@@ -24,7 +24,7 @@ func IPAuth(cidrs []string) (*AuthHandler, error) {
 
 func (h *AuthHandler) Allowed(remote string) (bool, error) {
 
-	addr, err := net.ResolveTCPAddr("tcp", remote+":0")
+	addr, err := net.ResolveTCPAddr("tcp", remote)
 
 	if err != nil {
 		return false, err
