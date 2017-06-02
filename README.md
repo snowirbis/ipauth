@@ -1,5 +1,5 @@
 # Description
-Go: Check access by IP address
+Check access by IP address
 
 # Install and Usage
 
