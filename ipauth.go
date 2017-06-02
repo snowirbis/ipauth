@@ -22,23 +22,7 @@ func IPAuth(cidrs []string) (*AuthHandler, error) {
 	return &AuthHandler{nets}, nil
 }
 
-func (h *AuthHandler) Allowed(remote string) (allowed bool, err error) {
-
-	allowed = false
-
-	authorized, err := h.authorized(remote)
-
-	if err != nil {
-		return
-	}
-
-	if authorized {
-		allowed = true
-	}
-	return
-}
-
-func (h *AuthHandler) authorized(remote string) (bool, error) {
+func (h *AuthHandler) Allowed(remote string) (bool, error) {
 
 	addr, err := net.ResolveTCPAddr("tcp", remote+":0")
 

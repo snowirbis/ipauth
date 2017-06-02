@@ -37,7 +37,7 @@ func main() {
 	var client string = "10.0.0.2"
 
 	// denied
-	// var client string = "10.0.0.2"
+	// var client string = "10.0.0.3"
 
 	auth, err := ipauth.IPAuth(nets)
 	if err != nil {
